@@ -37,18 +37,30 @@
 
                   <div class="shelf-content">
                     <ul class="plant-care-list">
-                      <li class="sunlight-item"><?php if(get_field('sunlight')){ 
+                      <li class="sunlight-item">
+                        <img src="<?php echo get_template_directory_uri() ?>/library/images/icons/sunlight.svg" class="svg"/>
+                        <p><?php if(get_field('sunlight')){ 
                         the_field('sunlight');
-                      }?> </li>
-                      <li class="water-item"><?php if(get_field('water_frequency')){ 
+                        }?> </p>
+                      </li>
+                      <li class="water-item">
+                        <img src="<?php echo get_template_directory_uri() ?>/library/images/icons/waterdrop.svg" class="svg"/>
+                        <p><?php if(get_field('water_frequency')){ 
                         the_field('water_frequency');
-                      }?> </li>
-                      <li class="soil-item"><?php if(get_field('soil_quality')){ 
+                        }?> </p>
+                      </li>
+                      <li class="soil-item">
+                        <img src="<?php echo get_template_directory_uri() ?>/library/images/icons/soil.svg" class="svg"/>
+                        <p> <?php if(get_field('soil_quality')){ 
                         the_field('soil_quality');
-                      }?> </li>
-                      <li class="grow-item"><?php if(get_field('growth')){ 
+                        }?> </p>
+                      </li>
+                      <li class="grow-item">
+                        <img src="<?php echo get_template_directory_uri() ?>/library/images/icons/growth.svg" class="svg"/>
+                        <p><?php if(get_field('growth')){ 
                         the_field('growth');
-                      }?> </li>
+                        }?> </p>
+                      </li>
                     </ul> 
 
                     <?php 
