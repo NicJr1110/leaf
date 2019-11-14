@@ -24,12 +24,12 @@
                 the_content(); ?>
                 <div class="shelf-main">
                   <div class="plant-names">
-                    <h1> <?php 
+                    <h1 class="plant-name"><span class="main-frame"> <span class= "inner-frame"><?php 
                     if(get_field('common_name')){ 
                       the_field('common_name');
-                    } ?> </h1> 
+                    } ?></span></span></h1> 
 
-                    <h2> <?php 
+                    <h2 class="latin-name"> Latin Name: <?php 
                     if(get_field('latin_name')){ 
                       the_field('latin_name');
                     } ?>  </h2>
