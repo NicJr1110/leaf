@@ -1,0 +1,42 @@
+.plant-article {
+    
+    .shelf-content{
+        padding-top: 10px;
+        display:flex;
+        justify-content: space-around;
+        overflow:hidden;
+    }
+
+    img{
+        max-width:200px;
+        border: 3px solid black;
+        transform: perspective(50em) rotateX(13deg);    
+        //box-shadow: 10px 7px 6px -4px #212522;
+
+
+    }
+    .img-shadow{
+        background-color:black;
+        position: absolute;
+        left: 100px;
+        width: 200px;
+        
+    }
+    .shelf-1{
+        height: 15px;
+
+    }
+
+    li{
+        padding-top:5px;
+    }
+    
+
+
+}
+
+.shelf-grey{
+    background-color: black;
+    
+    box-shadow: 0px 7px 6px -4px #212522;
+}
