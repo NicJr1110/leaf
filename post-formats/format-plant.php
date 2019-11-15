@@ -23,17 +23,17 @@
                 // the content (pretty self explanatory huh)
                 the_content(); ?>
                 <div class="shelf-main">
-                  <div class="plant-names frame">
+                  <div class="plant-names">
                     <div class="names">
-                    <h1 class="plant-name"><span class="main-frame"> <span class= "inner-frame"><?php 
-                    if(get_field('common_name')){ 
-                      the_field('common_name');
-                    } ?></span></span></h1> 
+                      <h1 class="plant-name"><span class="main-frame frame-sm"> <span class= "inner-frame frame-content"><?php 
+                      if(get_field('common_name')){ 
+                        the_field('common_name');
+                      } ?></span></span></h1> 
 
-                    <h2 class="latin-name"> Latin Name: <?php 
-                    if(get_field('latin_name')){ 
-                      the_field('latin_name');
-                    } ?>  </h2>
+                      <h2 class="latin-name"> Latin Name: <?php 
+                      if(get_field('latin_name')){ 
+                        the_field('latin_name');
+                      } ?>  </h2>
                     </div>
                   </div>
 
@@ -66,19 +66,19 @@
                       </li>
                     </ul> 
                     
-                   
-                    <?php 
-                    $image = get_field('plant_image');
-                    if( !empty( $image ) ): ?>
-                        
-                      <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="plant-image <?php if(get_field('image_orientation') == 'Portrait'){
+                    <div class="frame leaning-frame <?php if(get_field('image_orientation') == 'Portrait'){
                             
                             echo 'img-portrait';
                           } else {
                             
                             echo 'img-landscape';
-                        } ?> " />
-                      
+                        } ?> ">
+                    <?php 
+                    $image = get_field('plant_image');
+                    if( !empty( $image ) ): ?>
+                        
+                      <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="plant-image frame-content" />
+                    </div>
                           
                     <?php endif; ?>
                   </div>

@@ -2371,13 +2371,12 @@ nav {
   align-items: flex-end;
 }
 .plant-article .img-portrait {
-  max-width: 300px;
-}
-.plant-article .img-landscape {
   max-width: 400px;
 }
-.plant-article .plant-image {
-  border: 4px solid black;
+.plant-article .img-landscape {
+  max-width: 500px;
+}
+.plant-article .leaning-frame {
   transform: perspective(50em) rotateX(13deg);
   box-shadow: 10px 7px 6px -4px #212522;
   margin-bottom: -2px;
@@ -2425,42 +2424,46 @@ nav {
 
 .main-frame {
   padding: 30px 20px;
-  border-top: 10px solid #111313;
-  border-left: 10px solid #2e3234;
-  border-right: 10px solid #2e3234;
-  border-bottom: 10px solid #34393a;
-  box-shadow: 0px 6px 3px -4px #212522;
+  border-top: 10px solid #000;
+  border-left: 10px solid #1a1a1a;
+  border-right: 10px solid #1a1a1a;
+  border-bottom: 10px solid #333333;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 0 5px 10px 5px rgba(0, 0, 0, 0.25);
   background-color: white;
 }
 
 .inner-frame {
   padding: 10px;
-  box-shadow: inset 0 0 5px #212522;
   background-color: white;
+  border: solid 2px;
+  border-bottom-color: #ffe;
+  border-left-color: #eed;
+  border-right-color: #eed;
+  border-top-color: #ccb;
 }
 
 .gallery {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .frame {
   background-color: #ddc;
-  border: solid 5vmin #eee;
-  border-bottom-color: #fff;
-  border-left-color: #eee;
+  border: solid 5vmin #313131;
+  border-bottom-color: #484848;
+  border-left-color: #313131;
   border-radius: 2px;
-  border-right-color: #eee;
-  border-top-color: #ddd;
+  border-right-color: #313131;
+  border-top-color: #1a1a1a;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 0 5px 10px 5px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   display: inline-block;
-  margin: 10vh 10vw;
-  height: 80vh;
-  padding: 8vmin;
+  margin: 10px 10px;
+  padding: 4vmin;
   position: relative;
   text-align: center;
 }
-.frame img {
+.frame .frame-content {
   border: solid 2px;
   border-bottom-color: #ffe;
   border-left-color: #eed;
@@ -2468,6 +2471,10 @@ nav {
   border-top-color: #ccb;
   max-height: 100%;
   max-width: 100%;
+}
+.frame .frame-content:hover {
+  filter: brightness(0.4);
+  border: 2px solid red;
 }
 .frame:before {
   border-radius: 2px;
@@ -2488,6 +2495,56 @@ nav {
   position: absolute;
   right: -2.5vmin;
   top: -2.5vmin;
+}
+
+.frame-sm {
+  background-color: #ffe;
+  border: solid 3vmin #313131;
+  border-bottom-color: #484848;
+  border-left-color: #313131;
+  border-radius: 2px;
+  border-right-color: #313131;
+  border-top-color: #1a1a1a;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 0 5px 10px 5px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 10px 10px;
+  padding: 4vmin;
+  position: relative;
+  text-align: center;
+}
+.frame-sm .frame-content {
+  border: solid 2px;
+  border-bottom-color: #ffe;
+  border-left-color: #eed;
+  border-right-color: #eed;
+  border-top-color: #ccb;
+  max-height: 100%;
+  max-width: 100%;
+}
+.frame-sm .frame-content:hover {
+  filter: brightness(0.4);
+  border: 2px solid red;
+}
+.frame-sm:before {
+  border-radius: 2px;
+  bottom: -1vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25) inset;
+  content: "";
+  left: -1vmin;
+  position: absolute;
+  right: -1vmin;
+  top: -1vmin;
+}
+.frame-sm:after {
+  border-radius: 2px;
+  bottom: -1.5vmin;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+  content: "";
+  left: -1.5vmin;
+  position: absolute;
+  right: -1.5vmin;
+  top: -1.5vmin;
 }
 
 /*# sourceMappingURL=style.css.map */

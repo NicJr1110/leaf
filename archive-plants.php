@@ -24,42 +24,23 @@
 						<div class="gallery">
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php //post_class( 'cf' ); ?> role="article">
 								
-							
+							<a href ="<?php the_permalink()?>">
 								<picture class="frame">
 									<?php
 									$image = get_field('plant_image');
                 				    if( !empty( $image ) ): ?>
-									<a href ="<?php the_permalink()?>">
-										<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="300px" class="plant-image <?php if(get_field('image_orientation') == 'Portrait'){
+									
+										<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="300px" class="plant-image frame-content <?php if(get_field('image_orientation') == 'Portrait'){
 																	echo 'img-portrait';
 																	} else {
 																	echo 'img-landscape';
 																	} ?> " />
-									</a>								
+																	
                					     <?php endif; ?>	
 								</picture>
-
-
-								<header class="article-header">
-
-									<h3 class="h2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline vcard"><?php
-										printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time( 'Y-m-j' ), get_the_time( __( 'F jS, Y', 'bonestheme' ) ), get_author_posts_url( get_the_author_meta( 'ID' ) ));
-									?></p>
-
-								</header>
-
-								<section class="entry-content cf">
-
-									<?php the_excerpt(); ?>
-
-								</section>
-
-								<footer class="article-footer">
-
-								</footer>
+							</a>											
 
 							</article>
 
