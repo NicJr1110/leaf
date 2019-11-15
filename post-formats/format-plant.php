@@ -23,7 +23,8 @@
                 // the content (pretty self explanatory huh)
                 the_content(); ?>
                 <div class="shelf-main">
-                  <div class="plant-names">
+                  <div class="plant-names frame">
+                    <div class="names">
                     <h1 class="plant-name"><span class="main-frame"> <span class= "inner-frame"><?php 
                     if(get_field('common_name')){ 
                       the_field('common_name');
@@ -33,6 +34,7 @@
                     if(get_field('latin_name')){ 
                       the_field('latin_name');
                     } ?>  </h2>
+                    </div>
                   </div>
 
                   <div class="shelf-content">
@@ -63,7 +65,8 @@
                         }?> </p>
                       </li>
                     </ul> 
-
+                    
+                   
                     <?php 
                     $image = get_field('plant_image');
                     if( !empty( $image ) ): ?>
