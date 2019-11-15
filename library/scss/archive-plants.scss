@@ -47,15 +47,6 @@
         text-align: center;
     }
 
-    .frame-content:hover {
-        opacity: 0.3;
-        
-    }
-      
-    .middle .frame-content:hover  {
-        opacity: 1;
-    }
-
     &:before {
         border-radius:2px;
         bottom:-2vmin;
@@ -76,7 +67,27 @@
         right:-2.5vmin;
         top:-2.5vmin;
     }
+    &:hover .frame-content{
+        opacity: 0.3;
+        
+    }
+      
+    &:hover .middle {
+        opacity: 1;
+        color: black;
+
+    }
+
+    .text {
+        a{
+            color: black;
+            a:visited{
+                color:black;
+            }
+        }
+    }
 }
+
 
  
 .frame-sm {

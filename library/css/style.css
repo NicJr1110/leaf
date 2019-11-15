@@ -2486,12 +2486,6 @@ nav {
   -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-.frame .frame-content:hover {
-  opacity: 0.3;
-}
-.frame .middle .frame-content:hover {
-  opacity: 1;
-}
 .frame:before {
   border-radius: 2px;
   bottom: -2vmin;
@@ -2511,6 +2505,19 @@ nav {
   position: absolute;
   right: -2.5vmin;
   top: -2.5vmin;
+}
+.frame:hover .frame-content {
+  opacity: 0.3;
+}
+.frame:hover .middle {
+  opacity: 1;
+  color: black;
+}
+.frame .text a {
+  color: black;
+}
+.frame .text a a:visited {
+  color: black;
 }
 
 .frame-sm {

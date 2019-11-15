@@ -38,7 +38,7 @@
 																	echo 'img-landscape';
 																	} ?> " />
 										<div class="middle">
-  											<div class="text">John Doe</div>
+  											<div class="text"><?php the_title() ?> </div>
   										</div>
 																	
                					     <?php endif; ?>	
