@@ -6,13 +6,20 @@
         display:flex;
         justify-content: space-around;
         overflow:hidden;
+        align-items: flex-end;
     }
-
+    .img-portrait{
+        max-width: 300px;
+    }
+    .img-landscape{
+        max-width: 400px;
+    }
     .plant-image{
-        max-width:250px;
+        
         border: 4px solid black;
         transform: perspective(50em) rotateX(13deg);    
         box-shadow: 10px 7px 6px -4px #212522;
+        margin-bottom:-2px;
 
 
     }
@@ -30,6 +37,7 @@
 
     .plant-care-list{
         min-width: 300px;
+        padding-bottom: 30px;
     }
     li{
         padding-top:5px;

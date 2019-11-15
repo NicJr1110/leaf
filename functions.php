@@ -245,7 +245,7 @@ function bones_fonts() {
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
 // Creation of the CPT - Plants
-add_action('init','create_custom_post_type_plant'); // define plant custom post type
+add_action('init','create_custom_post_type_plant'); // define  custom post type
 
 function create_custom_post_type_plant(){
 	$labels = array(
@@ -275,7 +275,9 @@ function create_custom_post_type_plant(){
 		'rewrite' => array( "slug" => "plants" ), // defines URL base
 		'supports'=> array('title', 'thumbnail', 'editor', 'excerpt'),
 		'show_in_nav_menus' => true,
-		'taxonomies' => array( 'event_category', 'post_tag') // own categories
+    'taxonomies' => array( 'event_category', 'post_tag'), // own categories
+    'has_archive' => true
+    
 	);
 
 

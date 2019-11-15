@@ -50,7 +50,8 @@
                         }?> </p>
                       </li>
                       <li class="soil-item">
-                        <img src="<?php echo get_template_directory_uri() ?>/library/images/icons/soil.svg" class="svg"/>
+                        <img src="<?php echo get_template_directory_uri() ?>/library/images/icons/soil.svg" class="svg" 
+                        />
                         <p> <?php if(get_field('soil_quality')){ 
                         the_field('soil_quality');
                         }?> </p>
@@ -67,7 +68,14 @@
                     $image = get_field('plant_image');
                     if( !empty( $image ) ): ?>
                         
-                      <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="plant-image" />
+                      <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="plant-image <?php if(get_field('image_orientation') == 'Portrait'){
+                            
+                            echo 'img-portrait';
+                          } else {
+                            
+                            echo 'img-landscape';
+                        } ?> " />
+                      
                           
                     <?php endif; ?>
                   </div>

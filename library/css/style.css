@@ -2368,12 +2368,19 @@ nav {
   display: flex;
   justify-content: space-around;
   overflow: hidden;
+  align-items: flex-end;
+}
+.plant-article .img-portrait {
+  max-width: 300px;
+}
+.plant-article .img-landscape {
+  max-width: 400px;
 }
 .plant-article .plant-image {
-  max-width: 250px;
   border: 4px solid black;
   transform: perspective(50em) rotateX(13deg);
   box-shadow: 10px 7px 6px -4px #212522;
+  margin-bottom: -2px;
 }
 .plant-article .img-shadow {
   background-color: black;
@@ -2386,6 +2393,7 @@ nav {
 }
 .plant-article .plant-care-list {
   min-width: 300px;
+  padding-bottom: 30px;
 }
 .plant-article li {
   padding-top: 5px;
