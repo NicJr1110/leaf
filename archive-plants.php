@@ -37,6 +37,9 @@
 																	} else {
 																	echo 'img-landscape';
 																	} ?> " />
+										<div class="middle">
+  											<div class="text">John Doe</div>
+  										</div>
 																	
                					     <?php endif; ?>	
 								</picture>

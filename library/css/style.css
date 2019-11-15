@@ -1489,7 +1489,7 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: darkslategrey;
+  background-color: #313131;
 }
 
 #logo {
@@ -2445,6 +2445,7 @@ nav {
 .gallery {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .frame {
@@ -2464,6 +2465,9 @@ nav {
   text-align: center;
 }
 .frame .frame-content {
+  opacity: 1;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
   border: solid 2px;
   border-bottom-color: #ffe;
   border-left-color: #eed;
@@ -2472,9 +2476,21 @@ nav {
   max-height: 100%;
   max-width: 100%;
 }
+.frame .middle {
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
 .frame .frame-content:hover {
-  filter: brightness(0.4);
-  border: 2px solid red;
+  opacity: 0.3;
+}
+.frame .middle .frame-content:hover {
+  opacity: 1;
 }
 .frame:before {
   border-radius: 2px;
