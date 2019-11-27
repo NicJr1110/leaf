@@ -2364,7 +2364,7 @@ nav {
   position: relative;
 }
 .plant-article .shelf-content {
-  padding-top: 200px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-around;
   overflow: hidden;
@@ -2445,16 +2445,6 @@ nav {
   border-left-color: #eed;
   border-right-color: #eed;
   border-top-color: #ccb;
-}
-
-.shelf-main {
-  position: relative;
-}
-
-.plant-names {
-  position: absolute;
-  top: 20px;
-  left: 40px;
 }
 
 .gallery {
