@@ -118,16 +118,23 @@
                       $image = get_field('plant_image');
                                 if( !empty( $image ) ): ?>
                       
-                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="300px" class="plant-image frame-content <?php if(get_field('image_orientation') == 'Portrait'){
+                        <img 
+                          src="<?php 
+                          echo esc_url($image['url']); ?>" 
+                          alt="<?php 
+                          echo esc_attr($image['alt']); ?>"                 
+                          width="300px" 
+                          class="plant-image frame-content <?php if(get_field('image_orientation') =='Portrait'){
                                       echo 'img-portrait';
                                       } else {
                                       echo 'img-landscape';
-                                      } ?> " />
+                          } ?> " 
+                        />
                         <div class="middle">
-                            <div class="text"><?php the_title() ?> </div>
-                          </div>
+                          <div class="text"><?php the_title() ?> </div>
+                        </div>
                                       
-                                <?php endif; ?>	
+                      <?php endif; ?>	
                     </picture>
                   </a>											
 
