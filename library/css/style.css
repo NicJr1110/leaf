@@ -1425,13 +1425,13 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: grey;
   /* on hover */
   /* on click */
   /* mobile tap color */
 }
 a:hover, a:focus, a:visited:hover, a:visited:focus {
-  color: #d10e3c;
+  color: green;
 }
 a:link, a:visited:link {
   /*
@@ -1439,7 +1439,7 @@ a:link, a:visited:link {
   so it basically works like the :hover selector
   for mobile devices.
   */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3);
+  -webkit-tap-highlight-color: grey;
 }
 
 /******************************************************************
@@ -1489,14 +1489,14 @@ h5, .h5 {
 HEADER STYLES
 *********************/
 .header {
-  background-color: #313131;
+  background-color: #fff;
 }
 
 #logo {
   margin: 0.75em 0;
 }
 #logo a {
-  color: #fff;
+  color: grey;
 }
 
 /*********************
@@ -1527,7 +1527,7 @@ and more scalable.
 }
 .nav li a {
   display: block;
-  color: #fff;
+  color: grey;
   text-decoration: none;
   padding: 0.75em;
   /*
@@ -1949,6 +1949,64 @@ override these styles for the desktop
 view.
 */
 /* end .footer-links */
+.plant-article {
+  position: relative;
+}
+.plant-article .shelf-content {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.plant-article .img-portrait {
+  max-width: 300px;
+}
+.plant-article .img-landscape {
+  max-width: 400px;
+}
+.plant-article .img-shadow {
+  background-color: black;
+  position: absolute;
+  left: 100px;
+  width: 200px;
+}
+.plant-article .plant-care-list {
+  min-width: 300px;
+  padding-bottom: 30px;
+}
+.plant-article li {
+  padding-top: 5px;
+  border-bottom: 2px solid grey;
+  display: flex;
+  align-items: center;
+}
+.plant-article li p {
+  margin-left: 40px;
+}
+.plant-article .svg {
+  width: 50px;
+  height: 50px;
+}
+.plant-article h1 {
+  color: black;
+}
+.plant-article h2 {
+  color: black;
+  padding: 0px 20px 20px 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.shelf-grey {
+  display: none;
+}
+
+.shelf-1 {
+  height: 30px;
+}
+
 /*********************
 LARGER MOBILE DEVICES
 This is for devices like the Galaxy Note or something that's
@@ -2079,7 +2137,7 @@ you can add resource intensive styles.
     /* end current highlighters */
   }
   .nav ul {
-    background: #323944;
+    background: #fff;
     margin-top: 0;
   }
   .nav li {
@@ -2098,8 +2156,8 @@ you can add resource intensive styles.
     */
   }
   .nav li a:hover, .nav li a:focus {
-    color: #fff;
-    text-decoration: underline;
+    color: green;
+    text-decoration: none;
   }
   .nav li ul.sub-menu,
 .nav li ul.children {
@@ -2193,6 +2251,37 @@ you can add resource intensive styles.
     */
   }
   /* end .footer-links */
+  .plant-article .shelf-content {
+    align-items: flex-end;
+    flex-direction: row;
+  }
+  .plant-article .img-portrait {
+    max-width: 400px;
+  }
+  .plant-article .img-landscape {
+    max-width: 500px;
+  }
+  .plant-article .leaning-frame {
+    transform: perspective(50em) rotateX(13deg);
+    box-shadow: 10px 7px 6px -4px #212522;
+    margin-bottom: -2px;
+  }
+  .plant-article .img-shadow {
+    background-color: black;
+    position: absolute;
+    left: 100px;
+    width: 200px;
+  }
+
+  .shelf-grey {
+    display: block;
+    border-top: 5px solid #333333;
+    border-left: 5px solid #1a1a1a;
+    border-right: 5px solid #1a1a1a;
+    border-bottom: 5px solid #000;
+    box-shadow: 0px 7px 6px -4px #212522;
+    background-color: #1a1a1a;
+  }
 }
 /*********************
 DESKTOP
@@ -2360,103 +2449,6 @@ nav {
     display: none;
   }
 }
-.plant-article {
-  position: relative;
-}
-.plant-article .shelf-content {
-  padding-top: 200px;
-  display: flex;
-  justify-content: space-around;
-  overflow: hidden;
-  align-items: flex-end;
-}
-.plant-article .img-portrait {
-  max-width: 400px;
-}
-.plant-article .img-landscape {
-  max-width: 500px;
-}
-.plant-article .leaning-frame {
-  transform: perspective(50em) rotateX(13deg);
-  box-shadow: 10px 7px 6px -4px #212522;
-  margin-bottom: -2px;
-}
-.plant-article .img-shadow {
-  background-color: black;
-  position: absolute;
-  left: 100px;
-  width: 200px;
-}
-.plant-article .plant-care-list {
-  min-width: 300px;
-  padding-bottom: 30px;
-}
-.plant-article li {
-  padding-top: 5px;
-  border-bottom: 2px solid grey;
-  display: flex;
-  align-items: center;
-}
-.plant-article li p {
-  margin-left: 40px;
-}
-.plant-article .svg {
-  width: 50px;
-  height: 50px;
-}
-.plant-article h1 {
-  color: black;
-}
-.plant-article h2 {
-  color: black;
-  padding: 0px 20px 20px 40px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  font-size: 1rem;
-}
-
-.shelf-grey {
-  border-top: 5px solid #333333;
-  border-left: 5px solid #1a1a1a;
-  border-right: 5px solid #1a1a1a;
-  border-bottom: 5px solid #000;
-  box-shadow: 0px 7px 6px -4px #212522;
-  background-color: #1a1a1a;
-}
-
-.shelf-1 {
-  height: 30px;
-}
-
-.main-frame {
-  padding: 30px 20px;
-  border-top: 10px solid #000;
-  border-left: 10px solid #1a1a1a;
-  border-right: 10px solid #1a1a1a;
-  border-bottom: 10px solid #333333;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25) inset, 0 5px 10px 5px rgba(0, 0, 0, 0.25);
-  background-color: white;
-}
-
-.inner-frame {
-  padding: 10px;
-  background-color: white;
-  border: solid 2px;
-  border-bottom-color: #ffe;
-  border-left-color: #eed;
-  border-right-color: #eed;
-  border-top-color: #ccb;
-}
-
-.shelf-main {
-  position: relative;
-}
-
-.plant-names {
-  position: absolute;
-  top: 20px;
-  left: 40px;
-}
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -2583,6 +2575,30 @@ nav {
   position: absolute;
   right: -1.5vmin;
   top: -1.5vmin;
+}
+.frame-sm:hover .frame-content {
+  opacity: 0.2;
+}
+.frame-sm:hover .middle {
+  opacity: 1;
+  color: black;
+}
+.frame-sm .text a {
+  color: black;
+}
+.frame-sm .text a a:visited {
+  color: black;
+}
+
+.gallery-of-3 {
+  display: flex;
+  justify-content: flex-end;
+}
+.gallery-of-3 .img-landscape {
+  max-width: 100px;
+}
+.gallery-of-3 .img-portrait {
+  max-width: 75px;
 }
 
 /*# sourceMappingURL=style.css.map */

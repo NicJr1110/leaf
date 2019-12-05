@@ -42,7 +42,7 @@ NAVIGATION STYLES
 .nav {
 	border: 0;
 	ul {
-		background:$black;
+		background:$white;
 		margin-top:0;
 	}
 	li {
@@ -57,8 +57,8 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				color: $white;
-				text-decoration: underline;
+				color: green;
+				text-decoration: none;
 			}
 		}
 
@@ -284,4 +284,52 @@ mobile. Make sure to double check these!
 		}
 	}
 } /* end .footer-links */
+
+
+.plant-article {
+   
+    
+    .shelf-content{
+       
+       
+	
+		align-items: flex-end;
+		flex-direction: row;
+
+    }
+    .img-portrait{
+        max-width: 400px;
+    }
+    .img-landscape{
+        max-width: 500px;
+    }
+    .leaning-frame{
+        
+        // border: 4px solid black;
+        transform: perspective(50em) rotateX(13deg);    
+        box-shadow: 10px 7px 6px -4px #212522;
+        margin-bottom:-2px;
+
+
+    }
+    .img-shadow{
+        background-color:black;
+        position: absolute;
+        left: 100px;
+        width: 200px;
+        
+    }
+}
+
+.shelf-grey{
+	display:block;
+    border-top: 5px solid #333333;
+    border-left:5px solid #1a1a1a;
+    border-right:5px solid #1a1a1a;
+    border-bottom:5px solid #000;
+    box-shadow: 0px 7px 6px -4px #212522;
+    background-color: #1a1a1a;
+}
+
+
 
