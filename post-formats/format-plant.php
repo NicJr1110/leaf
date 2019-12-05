@@ -96,6 +96,48 @@
                     the_field('plant_details');
                   }?> </p>
                 </div>
+
+                <!-- I want to add information here of three random plants that have the same catagory -->
+                <div class="gallery gallery-of-3">
+                  <?php 
+                  $query_args = array (
+                    'post_type' => 'plants',
+                    'posts_per_page' => 3,
+                    'orderby' => 'rand'
+                  );
+
+                  $result = new WP_query($query_args);
+
+                  while ($result->have_posts()) : $result->the_post(); ?>
+
+                  <article id="post-<?php the_ID(); ?>" role="article">
+                    
+                  <a href ="<?php the_permalink()?>">
+                    <picture class="frame-sm">
+                      <?php
+                      $image = get_field('plant_image');
+                                if( !empty( $image ) ): ?>
+                      
+                        <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" width="300px" class="plant-image frame-content <?php if(get_field('image_orientation') == 'Portrait'){
+                                      echo 'img-portrait';
+                                      } else {
+                                      echo 'img-landscape';
+                                      } ?> " />
+                        <div class="middle">
+                            <div class="text"><?php the_title() ?> </div>
+                          </div>
+                                      
+                                <?php endif; ?>	
+                    </picture>
+                  </a>											
+
+                  </article>
+
+                  <?php 
+                  endwhile; 
+                  wp_reset_query();?>
+              
+						    </div>
                 
 
               </article> <?php // end article ?>

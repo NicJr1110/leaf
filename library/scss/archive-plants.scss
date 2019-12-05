@@ -140,4 +140,35 @@
         right:-1.5vmin;
         top:-1.5vmin;
     }
+    &:hover .frame-content{
+        opacity: 0.2;
+        
+    }
+      
+    &:hover .middle {
+        opacity: 1;
+        color: black;
+
+    }
+
+    .text {
+        a{
+            color: black;
+            a:visited{
+                color:black;
+            }
+        }
+    }
+}
+
+.gallery-of-3{
+    display: flex;
+    justify-content: flex-end;
+
+    .img-landscape{
+        max-width:100px;
+    }
+    .img-portrait{
+        max-width:75px;
+    }
 }

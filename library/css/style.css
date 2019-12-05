@@ -2576,5 +2576,29 @@ nav {
   right: -1.5vmin;
   top: -1.5vmin;
 }
+.frame-sm:hover .frame-content {
+  opacity: 0.2;
+}
+.frame-sm:hover .middle {
+  opacity: 1;
+  color: black;
+}
+.frame-sm .text a {
+  color: black;
+}
+.frame-sm .text a a:visited {
+  color: black;
+}
+
+.gallery-of-3 {
+  display: flex;
+  justify-content: flex-end;
+}
+.gallery-of-3 .img-landscape {
+  max-width: 100px;
+}
+.gallery-of-3 .img-portrait {
+  max-width: 75px;
+}
 
 /*# sourceMappingURL=style.css.map */
